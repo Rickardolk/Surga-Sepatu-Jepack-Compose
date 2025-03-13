@@ -144,5 +144,3 @@ fun ResetPasswordScreen(
         }
     }
 }
-
-//test
