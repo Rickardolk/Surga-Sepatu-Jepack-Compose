@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "622849737685",
+    "firebase_url": "https://surgasepatucompose-default-rtdb.firebaseio.com",
+    "project_id": "surgasepatucompose",
+    "storage_bucket": "surgasepatucompose.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622849737685:android:edcbb513d84f807457f35c",
+        "android_client_info": {
+          "package_name": "com.example.surgasepatu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE_wheDDcqErm4MKWxDJNd9RvlhWDPW78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
