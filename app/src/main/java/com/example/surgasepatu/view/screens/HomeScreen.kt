@@ -18,6 +18,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.RadioButtonColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -29,12 +30,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.surgasepatu.R
+import com.example.surgasepatu.viewModel.HomeViewModel
 
 @Composable
 fun HomeScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    homeViewModel: HomeViewModel = viewModel()
 ) {
+
+    val username by homeViewModel.username
+
    Box(
        modifier
            .fillMaxSize()
@@ -53,7 +60,7 @@ fun HomeScreen(
            ) {
                Column {
                    Text(
-                       text = "Hi, User👋🏻",
+                       text = "Hi, $username👋🏻",
                        fontSize = 26.sp,
                        fontWeight = FontWeight.SemiBold,
                        color = colorResource(id = R.color.rich_black)

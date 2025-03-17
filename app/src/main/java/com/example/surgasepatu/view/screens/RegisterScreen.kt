@@ -159,7 +159,7 @@ fun RegisterScreen(
             Spacer(modifier = Modifier.height(24.dp))
             Button(
                 onClick = {
-                    registerViewModel.register(email, password, context, navController)
+                    registerViewModel.register(username, email, password, context, navController)
                 },
                 modifier = Modifier
                     .fillMaxWidth(),
