@@ -38,12 +38,10 @@ fun Navigation() {
     val coroutineScope = rememberCoroutineScope()
     var resetBackPressed by remember { mutableStateOf<Job?>(null) }
 
-    BackHandler(
-        enabled = currentRoute == ScreenNavigation.Home.route
-    ) {
+    BackHandler(enabled = currentRoute == ScreenNavigation.Home.route) {
         if (backPressed) {
             resetBackPressed?.cancel()
-            (context as Activity).finish()
+            (context as Activity). finish()
         } else {
             backPressed = true
             Toast.makeText(

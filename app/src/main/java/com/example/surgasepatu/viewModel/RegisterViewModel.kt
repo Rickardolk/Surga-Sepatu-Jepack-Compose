@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.launch
@@ -37,13 +38,6 @@ class RegisterViewModel : ViewModel() {
                                         Toast.makeText(
                                             context,
                                             "Register berhasil",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-                                    }
-                                    .addOnFailureListener {
-                                        Toast.makeText(
-                                            context,
-                                            "Gagal menyimpan data",
                                             Toast.LENGTH_SHORT
                                         ).show()
                                     }

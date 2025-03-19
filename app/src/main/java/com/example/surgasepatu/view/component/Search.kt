@@ -32,7 +32,7 @@ fun Search(
     var searchQuery by remember { mutableStateOf("") }
     var active by remember { mutableStateOf(false) }
     val items = listOf("Porte", "Air Jordan", "Air Max", "Air Force", "Compos", "Nike", "Adidas","Vans", "Converse")
-    val filterItem = items.filter { it.contains(searchQuery, ignoreCase = true) }
+    val filterItems = items.filter { it.contains(searchQuery, ignoreCase = true) }
 
     Column(
         modifier
@@ -44,8 +44,7 @@ fun Search(
             onSearch = {active = false},
             active = active,
             onActiveChange = {active = it},
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             placeholder = { Text(text = "Search")},
             leadingIcon = {
                 Icon(
@@ -59,11 +58,11 @@ fun Search(
             )
         ) {
             if (searchQuery.isNotEmpty()) {
-                if (filterItem.isNotEmpty()) {
+                if (filterItems.isNotEmpty()) {
                     LazyColumn {
-                        items(filterItem.size) { index ->
+                        items(filterItems.size) { index ->
                             Text(
-                                text = filterItem[index],
+                                text = filterItems[index],
                                 modifier.padding(16.dp)
                             )
                         }
@@ -83,7 +82,6 @@ fun Search(
         }
     }
 }
-
 
 @Preview
 @Composable
