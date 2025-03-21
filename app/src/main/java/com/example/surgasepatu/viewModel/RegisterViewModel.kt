@@ -24,7 +24,7 @@ class RegisterViewModel : ViewModel() {
         viewModelScope.launch {
             if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
                 authRef.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener { task->
+                    .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             val userId = authRef.currentUser?.uid
                             val user = mapOf(
